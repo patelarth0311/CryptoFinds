@@ -1,0 +1,231 @@
+@font-face {
+    font-family: font;
+    src: url(font.ttf);
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    letter-spacing: .05em;
+    color: white;
+    font-family:  font;
+    font-weight: 800;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #111;
+}
+
+/*loadPage*/ 
+
+h1 {
+
+    font-size: 60px;
+    align-self: center;
+}
+#AOT {
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    text-align: center;
+    bottom: 0;
+    padding: 50px;
+    flex-direction: row;
+   flex-wrap: wrap;
+   
+}
+#AOT img {
+    
+    object-fit: contain;
+
+height: 250px;
+    border-radius: 30px;
+margin: 20px;
+border: 2px solid #1b1b1b;
+box-shadow: 0 0.3vmin 1.5vmin #000;
+
+}
+
+#loadPage {
+   overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+}
+
+/* Nav */
+nav {
+ 
+    margin: 10px;
+    position: fixed;
+    font-size: 30px;
+   
+   
+}
+
+ul {
+   
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    color: white; 
+    text-decoration: none;
+}
+
+.logout a {
+    float: right;
+    padding-left: 1400px;
+    padding-top: 50px;
+    margin: -50px;
+}
+
+.wishlist {
+    padding-left: 1200px;
+}
+
+
+
+.signup-form {
+    display: flex;
+   flex-direction: column;
+
+}
+
+#signUpFormCont, #window {
+  
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+ height: 100%;
+ row-gap: 80px;
+
+}
+
+input {
+    display: flex;
+    margin-bottom: 14px;
+   width: 100%;
+   max-width: 500px;
+   min-width: 280px;
+   height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    text-align: center; 
+    border: 1px solid #1b1b1b;
+    box-shadow: 0 0.3vmin 1.2vmin #000;
+    transition-duration: .6s;
+
+    background: #121212;
+}
+
+
+textarea:focus, input:focus  {
+    border: 1px solid rgb(48, 209, 88);
+    outline: 0 none;
+    transform: scale(.90);
+}
+
+input[type  = 'text' ], input[type  = 'password' ]  {
+    font-family: font;
+    font-size: 17px;
+    color: white;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+  padding-bottom: 20px;
+}
+button {
+    color: white;
+    font-family: font;
+   margin: 30px;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #1b1b1b;
+    box-shadow: 0 0.3vmin 1.3vmin #000;
+    background: #121212;
+}
+
+
+#forgotPasButton {
+    background: none;
+    box-shadow: none;
+    border: none;
+width: 120px;;
+    font-size: 15px;
+    margin: 0;
+
+}
+
+table.list {
+    border: 2px gray groove;
+    margin: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    margin: 20px 0;
+}
+
+table.list,
+.list th,
+.list td {
+    padding: 10px;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+}
+.title {
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+}
+#addwishlist {
+    padding-left: 550px;
+    text-decoration:underline;
+
+}
+#addwishlist a:hover {
+    color: blue;
+}
+#home {
+    padding-top: 420px;
+}
+.info {
+    color: white;
+}
+
+
+
+
+
