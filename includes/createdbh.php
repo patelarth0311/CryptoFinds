@@ -20,7 +20,7 @@ mysqli_stmt_prepare($stmt, $sql);
 mysqli_stmt_execute($stmt);
 
 
-$sql2 = "CREATE users (
+$sql2 = "CREATE TABLE users (
     usersId INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
     usersName VARCHAR(128) NOT NULL,
     usersEmail VARCHAR(128) NOT NULL,

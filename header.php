@@ -18,6 +18,7 @@
 
         <li> <a href = "login.php"> Log in </a></li>
         <li> <a href = "signup.php"> Sign up </a>  </li>
+        <li> <a href = "cryptos.php"> Crypto Query </a>  </li>
 </ul>
 </div>
 </nav>

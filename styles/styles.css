@@ -185,3 +185,42 @@ width: 120px;;
 
 
 
+
+.cryptopics {
+    height: 100%;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+
+    height: 50px;
+    width: 100%;
+   
+
+    column-gap:  3.5%;
+    border: 1px solid #1b1b1b;
+    box-shadow: 0 0.3vmin 1.2vmin #000;
+    transition-duration: .6s;
+    border-radius: 50px;
+    background: #121212;
+    border: 1px solid #1b1b1b;
+    align-items: center;
+    overflow-y: hidden;
+    text-align: left;
+  
+}
+
+
+#container {
+ 
+    padding: 20px;
+
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}

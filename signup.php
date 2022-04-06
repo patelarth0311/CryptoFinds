@@ -23,13 +23,13 @@ if (isset($_GET["error"])) {
        echo "<p>Fill in all fields.</p>";
    } else  if ($_GET["error"] == "invalidusername" ){
     echo "<p>Choose a valid username.</p>";
-   } else if ($_GET["echo"] == "invalidemail") {
+   } else if ($_GET["error"] == "invalidemail") {
     echo "<p>Choose a valid email.</p>";
-   } else if ($_GET["echo"] == "passwordsdontmatch") {
+   } else if ($_GET["error"] == "passwordsdontmatch") {
     echo "<p>Passwords do not match.</p>";
-   } else if ($_GET["echo"] == "usernametaken") {
+   } else if ($_GET["error"] == "usernametaken") {
     echo "<p>Username has been taken.</p>";
-   } else if ($_GET["echo"] == "stmtfailed") {
+   } else if ($_GET["error"] == "stmtfailed") {
     echo "<p>Internal error.</p>";
 } else {
     echo "<p>You have signed up.</p>";

@@ -16,27 +16,3 @@
 
 
 
-<?php
-
-
-if (isset($_GET["error"])) {
-    if ($_GET["error"] == "emptyinput") {
-        echo "<p>Fill in all fields.</p>";
-    } else  if ($_GET["error"] == "wronglogin" ){
-     echo "<p>Enter the correct username/password</p>";
-    } else  if ($_GET["error"] == "none2" ){
-        echo "<p>You have changed the password.</p>";
-       } 
-    else {
-     echo "<p>You have logged in.</p>";
- }
- }
-
-?>
-
-
-<div>
-
-
-
-</section>
