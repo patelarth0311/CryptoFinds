@@ -1,16 +1,11 @@
-<?php   include_once 'header.php'?>
+<?php   include_once 'header.php';
+?>
 
 
 <div id = "loadPage" >
 
 <h1>Crypto Finds</h1>
-<div id = "AOT">
 
-<img src = "images/armiinscared.png"></img>
-<img src = "images/yelenafine.png"></img>
-
-
-</div>
 </div>
 
 </body>

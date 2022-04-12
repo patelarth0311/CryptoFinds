@@ -55,6 +55,7 @@ $supply = $name[$i]['circulating_supply'];
 
 
      echo  "<div class = 'row'>
+     <img src = 'images/star.svg'></img>
      <img class = 'cryptopics' src = 'https://cryptologos.cc/logos/{$toLower}-{$toLower2}-logo.svg?v=022' ></img>
      <p>{$name[$i]['name']}</p>
      <p>{$symbol}</p>
