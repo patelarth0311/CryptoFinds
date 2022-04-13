@@ -1,5 +1,4 @@
-
-<?php   include_once 'header.php'?>
+<?php  include_once 'header.php'?>
 
 <div id = "container" >
 
@@ -9,6 +8,8 @@
 
 </div>
 <?php
+session_start();
+include('includes/dbh.inc.php');
 $url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
 $parameters = [
   'limit' => "50"
@@ -65,8 +66,25 @@ $supply = $name[$i]['circulating_supply'];
      <p>{$marketcap}</p>
      <p>{$volume}</p>
      <p>{$supply}</p>
+     <button style='background-color: green;' onclick='location.href=\"cryptos.php?add_id=".$name[$i]['name']."\";'>Add</button>
      </div> ";
-     
+}
+
+if(isset($_REQUEST['add_id'])) {
+    $add_id=$_REQUEST['add_id'];
+    $usersId=$_SESSION['userid'];
+    $sql="SELECT* FROM wishlist WHERE usersId='$usersId' AND cryptoName='$add_id'";
+    $result=mysqli_query($conn, $sql);
+    if(mysqli_num_rows($result)==1) {
+      echo '<script>alert("Already in wishlist")</script>';
+    }
+    
+    else {
+    $insert="INSERT INTO wishlist (cryptoName, usersId) VALUES ('$add_id', '$usersId')";
+    if(mysqli_query($conn, $insert)) {
+      echo '<script>alert("Successfully added to wishlist")</script>';
+    }
+}
 }
 
 curl_close($curl); // Close request
