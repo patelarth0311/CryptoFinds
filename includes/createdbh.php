@@ -5,7 +5,6 @@ $servername = "127.0.0.1";
 $username = "root";
 $password = "";
 
-$dbname = "userLogIn";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -20,9 +19,8 @@ $stmt = mysqli_stmt_init($conn);
 mysqli_stmt_prepare($stmt, $sql);
 mysqli_stmt_execute($stmt);
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-$stmt = mysqli_stmt_init($conn);
-$sql = "CREATE TABLE users (
+
+$sql2 = "CREATE users (
     usersId INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
     usersName VARCHAR(128) NOT NULL,
     usersEmail VARCHAR(128) NOT NULL,
@@ -31,15 +29,18 @@ $sql = "CREATE TABLE users (
     )";
 
 
-mysqli_stmt_prepare($stmt, $sql);
+mysqli_stmt_prepare($stmt, $sql2);
 mysqli_stmt_execute($stmt);
 
- 
-mysqli_close($conn);
+$sql3 = "CREATE wishlist (
+  wishlistId INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+  cryptoName VARCHAR(128) NULL,
+  usersId INT(11) NOT NULL
+  )";
 
 
-
-
+mysqli_stmt_prepare($stmt, $sql3);
+mysqli_stmt_execute($stmt);
 
 ?>
 
