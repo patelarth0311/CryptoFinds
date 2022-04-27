@@ -35,6 +35,8 @@ $response = curl_exec($curl); // Send the request, save the response
 $decoded_json = json_decode($response, true); 
 $name = $decoded_json["data"];
 
+$search=strtolower($_POST["keyword"]);
+
 // price 24h 7d market cap volume supply 
 
 for ($i = 0; $i < count($name); $i++) {
@@ -49,7 +51,7 @@ for ($i = 0; $i < count($name); $i++) {
     $volume = $name[$i]['quote']['USD']['volume_24h'];
     $supply = $name[$i]['circulating_supply'];
 
-    if($name[$i]['name']==$_POST["keyword"]) {
+    if($toLower==$search||$name[$i]['name']==$_POST["keyword"]) {
         echo  "<div class = 'row'>
          <img src = 'images/star.svg'></img>
          <img class = 'cryptopics' src = 'https://cryptologos.cc/logos/{$toLower}-{$toLower2}-logo.svg?v=022' ></img>
