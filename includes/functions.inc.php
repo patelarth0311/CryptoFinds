@@ -153,7 +153,7 @@ function invalidEmail($email) {
             session_start();
             $_SESSION["userid"] =  $uidExists["usersId"];
             $_SESSION["useruid"] =  $uidExists["usersUid"];
-            header("location: ../index.php");
+            header("location: ../checking.php");
             exit();
         }
 
